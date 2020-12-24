@@ -67,3 +67,30 @@ a {
   text-decoration: inherit;
   font-size: 13.3333px;
 }
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 60%;
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  .mainContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .detailButtons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detailButton,
+  .applyButton {
+    /* very important style for flex */
+    display: inline-block;
+
+    align-self: center;
+  }
+}

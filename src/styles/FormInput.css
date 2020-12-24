@@ -22,3 +22,9 @@
 .checkInput {
   margin: 10px;
 }
+
+@media screen and (max-width: 300px) {
+  .formInput {
+    align-items: center;
+  }
+}

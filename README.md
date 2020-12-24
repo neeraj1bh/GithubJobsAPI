@@ -14,7 +14,8 @@ npm install && npm run dev
 ```
 
 ## Features
-- User can search jobs
+- User can search and apply for jobs
+- View detailed information for every job.
 - Filter Jobs based on position or location
 - Pagination
 

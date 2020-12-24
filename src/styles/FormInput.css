@@ -1,0 +1,24 @@
+.formInput {
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 70vh;
+}
+
+.textInput {
+  padding: 15px;
+  width: 20rem;
+  margin: 10px;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.checkInput {
+  margin: 10px;
+}

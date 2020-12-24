@@ -1,0 +1,69 @@
+.container {
+  margin: 2rem 0rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mainContent {
+  display: flex;
+}
+
+.subContent1 {
+  flex: 70%;
+  margin: 1.5rem;
+  flex-wrap: wrap;
+}
+.subContent2 {
+  flex: 30%;
+  margin: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.applyButton,
+.detailButton {
+  padding: 20px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  margin: 1.5rem;
+  background: #d3d3d3;
+}
+
+.applyButton:hover,
+.detailButton:hover {
+  background: rgb(187, 229, 255);
+  color: black;
+}
+
+.description {
+  display: inline-block;
+  margin: 1.5rem;
+}
+
+.text-green-600 {
+  text-align: end;
+  color: #38a169;
+  font-weight: 700;
+}
+
+.datePosted {
+  text-align: end;
+  margin-top: 1rem;
+}
+
+.company {
+  text-align: end;
+  color: #5964e0;
+  font-weight: 700;
+  margin: 1rem 0rem;
+}
+
+.text-green-600:after {
+  content: " \2219 ";
+  font-weight: 900;
+  color: #000000;
+  margin: 0rem 0.5rem;
+}
+
+a {
+  text-decoration: inherit;
+  font-size: 13.3333px;
+}

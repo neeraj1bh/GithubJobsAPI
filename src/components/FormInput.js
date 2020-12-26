@@ -19,7 +19,7 @@ export default function FormInput({ params, onParamChange }) {
         placeholder="Location [ eg: New York ]"
       />
       <div className="checkInput">
-        <label for="full_time">Only Full-Time Roles </label>
+        <label htmlFor="full_time">Only Full-Time Roles </label>
         <input
           type="checkbox"
           name="full_time"

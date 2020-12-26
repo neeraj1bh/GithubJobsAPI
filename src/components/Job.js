@@ -30,12 +30,11 @@ export default function Job({ job }) {
         >
           {open ? "Hide Details" : "View Details"}
         </button>
-
         <a
           href={job.company_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="applyButton"
+          className="detailButton"
         >
           Apply Now
         </a>

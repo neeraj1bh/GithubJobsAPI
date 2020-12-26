@@ -20,7 +20,10 @@
 
 .applyButton,
 .detailButton {
-  padding: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  color: black;
+  font-weight: 700;
   border: none;
   font-family: "Poppins", sans-serif;
   margin: 1.5rem;
@@ -30,7 +33,6 @@
 .applyButton:hover,
 .detailButton:hover {
   background: rgb(187, 229, 255);
-  color: black;
 }
 
 .description {
@@ -56,10 +58,10 @@
   margin: 1rem 0rem;
 }
 
-.text-green-600:after {
+.text-green-600::after {
   content: " \2219 ";
+  color: rgb(77, 255, 0);
   font-weight: 900;
-  color: #000000;
   margin: 0rem 0.5rem;
 }
 

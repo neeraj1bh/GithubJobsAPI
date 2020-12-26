@@ -1,14 +1,14 @@
 body {
   align-items: center;
-  width: 80%;
+
   margin: auto;
   font-family: "Poppins", sans-serif;
   background-color: #fbfbfb;
 }
 
-h1,
+/* h1,
 h2 {
   letter-spacing: 2px;
   padding: 5px;
   margin: 2rem 0rem;
-}
+} */

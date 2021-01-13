@@ -1,21 +1,24 @@
 .container {
-  margin: 2rem 0rem;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  min-height: 15rem;
+  margin: 1rem 0rem;
+}
+
+.darkToggle {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container:hover {
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1),
+    0px 4px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mainContent {
   display: flex;
-}
-
-.subContent1 {
-  flex: 70%;
-  margin: 1.5rem;
+  flex-direction: column;
   flex-wrap: wrap;
-}
-.subContent2 {
-  flex: 30%;
-  margin: 1.5rem;
-  flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .applyButton,
@@ -46,16 +49,10 @@
   font-weight: 700;
 }
 
-.datePosted {
-  text-align: end;
-  margin-top: 1rem;
-}
-
 .company {
-  text-align: end;
   color: #5964e0;
   font-weight: 700;
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
 }
 
 .text-green-600::after {
@@ -76,11 +73,7 @@ a {
     scroll-behavior: smooth;
     width: 100%;
   }
-  .mainContent {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+
   .detailButtons {
     display: flex;
     flex-wrap: wrap;

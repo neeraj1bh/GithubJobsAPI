@@ -1,21 +1,37 @@
+.allJobs {
+  display: grid;
+  column-gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+}
+
 .App {
   width: 90%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .navHead {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 90%;
+  margin: auto;
+}
+
+.navContainer {
+  background: linear-gradient(to right, #009fff, #ec2f4b);
+}
+
+.paginationApp {
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 .logoTitle {
-  flex: 70%;
   display: flex;
+  flex-grow: 1;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .logoTitle h1 {
@@ -23,7 +39,9 @@
 }
 
 .switch-wrapper {
-  flex: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .dark-theme {
@@ -112,28 +130,25 @@ html.dark-theme .switch-wrapper .moon {
   position: absolute;
 }
 
-@media only screen and (max-width: 365px) {
-  .logoTitle {
-    flex: 10%;
-    display: flex;
-    align-items: center;
-  }
-
-  .switch-wrapper {
-    flex: 10%;
-  }
-}
-
 @media screen and (max-width: 994px) {
   html {
     font-size: 60%;
     scroll-behavior: smooth;
   }
-  .App {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    flex-direction: column;
-    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+  .allJobs {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .allJobs {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
   }
 }

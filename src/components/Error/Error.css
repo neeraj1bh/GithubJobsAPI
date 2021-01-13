@@ -1,0 +1,14 @@
+.outerErrorDiv {
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.mainErrorDiv {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+}

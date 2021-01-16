@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import "../styles/Singlejob.css";
 
-export default function Sjob(props) {
+export default function Singlejob(props) {
   const { job } = props.location.state;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [job]);
   return (
     <div className="jobDContainer">
       {/* {console.log(job)} */}

@@ -36,15 +36,34 @@ const defaultURL =
   "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
 
 export default function useFetchJobs(params, page) {
+  //   console.log(params);
+
   const [state, dispatch] = useReducer(reducer, { jobs: [], loading: true });
+  //   const [loadedData, setLoadedData] = useState(false);
+  //   console.log(loadedData);
+  //   setLoadedData(true);
+  //   let stateSaved = sessionStorage.getItem("stateGit");
 
   useEffect(() => {
+    // if (stateSaved) {
+    //   let state = sessionStorage.getItem("stateGit");
+    //   if (state) {
+    //     // console.log("I'm called");
+
+    //     return JSON.parse(state);
+    //   }
+    // }
     const cancelToken1 = axios.CancelToken.source();
     dispatch({ type: ACTIONS.MAKE_REQUEST });
     axios
       .get(defaultURL, {
         cancelToken: cancelToken1.token,
-        params: { markdown: true, page: page, ...params },
+        params: {
+          markdown: true,
+          page: page,
+          full_time: localStorage.getItem("fulltime"),
+          ...params,
+        },
       })
       .then((res) =>
         dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } })
@@ -59,14 +78,19 @@ export default function useFetchJobs(params, page) {
     axios
       .get(defaultURL, {
         cancelToken: cancelToken2.token,
-        params: { markdown: true, page: page + 1, ...params },
+        params: {
+          markdown: true,
+          page: page + 1,
+          full_time: localStorage.getItem("fulltime"),
+          ...params,
+        },
       })
-      .then((res) =>
+      .then((res) => {
         dispatch({
           type: ACTIONS.HAS_NEXT_PAGE,
           payload: { hasNextPage: res.data.length !== 0 },
-        })
-      )
+        });
+      })
       .catch((e) => {
         if (axios.isCancel(e)) return;
         dispatch({ type: ACTIONS.ERROR, payload: { error: e } });
@@ -77,6 +101,6 @@ export default function useFetchJobs(params, page) {
       cancelToken2.cancel();
     };
   }, [params, page]);
-
+  //   sessionStorage.setItem("stateGit", JSON.stringify(state));
   return state;
 }

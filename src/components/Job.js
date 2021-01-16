@@ -1,50 +1,35 @@
-import React, { useState } from "react";
-import ReactMarkdown from "react-markdown";
+import React from "react";
 import moment from "moment";
 import "../styles/Job.css";
+import { Link } from "react-router-dom";
 
 export default function Job({ job }) {
-  const [open, setOpen] = useState(false);
-
   return (
-    <div className="container">
+    <div className="container darkToggle">
       <div className="mainContent">
-        <div className="subContent1">
-          <h4>{job.title}</h4>
-          <div>{job.location}</div>
-        </div>
-        <div className="subContent2">
-          <div className="company">{job.company}</div>
-          <div className="datePosted">
-            <span className="text-green-600">{job.type}</span>
-            {moment(job.created_at).startOf("hour").fromNow()}
-          </div>
-        </div>
-      </div>
-      <div className="detailButtons">
-        <button
-          className="detailButton"
-          onClick={() => {
-            setOpen((prevState) => !prevState);
-          }}
-        >
-          {open ? "Hide Details" : "View Details"}
-        </button>
-        <a
-          href={job.company_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="detailButton"
-        >
-          Apply Now
-        </a>
-      </div>
+        <div className="datePosted">
+          <span className="text-grey-600">{job.type}</span>
+          <span className="text-grey">
+            {/* {console.log(new Date(job.created_at))}
+            {console.log(job.created_at)} */}
 
-      {open ? (
-        <div>
-          <ReactMarkdown className="description" source={job.description} />
+            {moment(new Date(job.created_at)).startOf("hour").fromNow()}
+          </span>
         </div>
-      ) : null}
+        <Link
+          to={{
+            pathname: `/job/${job.id}`,
+            state: {
+              job: job,
+            },
+          }}
+          style={{ color: "inherit", textDecoration: "inherit" }}
+        >
+          <h3>{job.title}</h3>
+        </Link>
+        <div className="company">{job.company}</div>
+      </div>
+      <div className="jLocation">{job.location}</div>
     </div>
   );
 }

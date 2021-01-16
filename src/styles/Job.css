@@ -1,8 +1,11 @@
 .container {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
   border-radius: 1rem;
-  min-height: 15rem;
-  margin: 1rem 0rem;
+  min-height: 10rem;
+  margin: 2rem 0rem;
+  padding: 2rem;
 }
 
 .darkToggle {
@@ -15,27 +18,36 @@
 }
 
 .mainContent {
+  flex: 9;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 2rem;
+  overflow-wrap: break-word;
+}
+
+.jLocation {
+  flex: 1;
+  color: #38a169;
+  font-weight: 700;
 }
 
 .applyButton,
 .detailButton {
   border-radius: 10px;
   padding: 15px;
-  color: black;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.1);
+
   font-weight: 700;
   border: none;
   font-family: "Poppins", sans-serif;
   margin: 1.5rem;
-  background: #d3d3d3;
 }
 
 .applyButton:hover,
 .detailButton:hover {
   background: rgb(187, 229, 255);
+  color: black;
 }
 
 .description {
@@ -43,19 +55,19 @@
   margin: 1.5rem;
 }
 
-.text-green-600 {
+.text-grey-600,
+.text-grey {
   text-align: end;
-  color: #38a169;
+  color: rgb(110, 128, 152);
   font-weight: 700;
 }
-
 .company {
   color: #5964e0;
   font-weight: 700;
   margin: 0.5rem 0rem;
 }
 
-.text-green-600::after {
+.text-grey-600::after {
   content: " \2219 ";
   color: rgb(77, 255, 0);
   font-weight: 900;
@@ -72,6 +84,10 @@ a {
     font-size: 60%;
     scroll-behavior: smooth;
     width: 100%;
+  }
+
+  h3 {
+    font-size: 80%;
   }
 
   .detailButtons {

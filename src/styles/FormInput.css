@@ -1,5 +1,5 @@
 .formInput {
-  margin: auto;
+  margin: 1rem 0rem 0rem 0rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -10,7 +10,7 @@
 
 .textInput {
   padding: 25px;
-  min-width: 30rem;
+  min-width: 25rem;
   margin: 0.5rem 0rem;
   text-align: center;
   font-size: 1rem;
@@ -19,9 +19,22 @@
   border: none;
 }
 
-.checkInput {
-  margin: 10px;
-  padding: 10px;
+.buttonInput {
+  all: revert;
+  color: inherit;
+  margin: 0.5rem 0rem;
+  text-align: center;
+  min-width: 15rem;
+  text-transform: capitalize;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  font-size: 1rem;
+  padding: 25px;
+}
+
+.buttonInput:hover {
+  background: rgb(187, 229, 255);
+  color: black;
 }
 
 @media screen and (max-width: 300px) {

@@ -3,14 +3,11 @@
 
 ### Live Demo
 
+[Click here to see it live](https://githubjobsapi.netlify.app/)
+
 [![project thumbnail](./src/assets/Screen1.webp)](https://githubjobsapi.netlify.app/)
 [![project thumbnail](./src/assets/Screen2.webp)](https://githubjobsapi.netlify.app/)
 [![project thumbnail](./src/assets/Screen3.webp)](https://githubjobsapi.netlify.app/)
-
-
-
-[Click here to see it live](https://githubjobsapi.netlify.app/)
-
 
 ## Installation
 ```

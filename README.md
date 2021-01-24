@@ -4,6 +4,8 @@
 ### Live Demo
 
 [![project thumbnail](./src/assets/Screen1.webp)](https://githubjobsapi.netlify.app/)
+[![project thumbnail](./src/assets/Screen2.webp)](https://githubjobsapi.netlify.app/)
+[![project thumbnail](./src/assets/Screen3.webp)](https://githubjobsapi.netlify.app/)
 
 
 

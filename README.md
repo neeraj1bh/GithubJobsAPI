@@ -3,7 +3,8 @@
 
 ### Live Demo
 
-[![netlify status][netlify-badge]][netlify-url]
+[![project thumbnail](./src/assets/Screen1.webp)](https://githubjobsapi.netlify.app/)
+
 
 
 [Click here to see it live](https://githubjobsapi.netlify.app/)

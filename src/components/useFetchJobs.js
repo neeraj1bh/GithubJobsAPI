@@ -33,7 +33,7 @@ function reducer(state, action) {
 }
 
 const defaultURL =
-  "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
+  "https://cors.bridged.cc/https://jobs.github.com/positions.json";
 
 export default function useFetchJobs(params, page) {
   //   console.log(params);
